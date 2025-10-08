@@ -22,11 +22,11 @@ The current implementation for blog post details is a single placeholder object.
 postDetails: [
   {
     id: 4,
-    paragraph1: "Ready to make Etobicoke your home? ...",
+    paragraph1: "Ready to make Toronto your home? ...",
     quote: "The current market strongly favors buyers like you...",
     quoteAuthor: "Market Analysis",
     paragraph2: "Maximize your down payment power with smart government programs...",
-    paragraph3: "Choose your Etobicoke neighborhood strategically..."
+    paragraph3: "Choose your Toronto neighborhood strategically..."
   },
   // ... objects for other posts
 ]
