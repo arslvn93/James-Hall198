@@ -9,7 +9,7 @@ $font-main-5: "Manrope", sans-serif;
 $fontIcon: "icomoon";
 
 :root {
-  --bg-body-color: #1f2124;
+  --bg-body-color: #013121;
   --Black: #000000;
   --White: #ffffff;
   --Text-white: #ffffff;
@@ -18,17 +18,17 @@ $fontIcon: "icomoon";
   --Text-3: rgba(44, 46, 51, 0.6);
   --Text-4: rgba(44, 46, 51, 0.5);
   --Text-5: rgba(44, 46, 51, 0.5);
-  --Heading: #2c2e33;
+  --Heading: #013121;
   --Heading-2: rgba(44, 46, 51, 0.5);
   --Note: #a8abae;
   --Note-2: #8e8e93;
-  --Primary: #e8194b;
+  --Primary: #e4b058;
   --Primary-dark: var(--Primary); // Dark shade now inherits from Primary
   --Sub-primary-1: #fef7f1; // Note: This is likely related to the original orange theme, might need adjustment if primary changes drastically
   --Sub-primary-2: rgba(6, 167, 136, 0.15); // Updated tint for current --Primary #06a788
   --Sub-primary-3: rgba(6, 167, 136, 0.1); // Updated tint for current --Primary #06a788
   --shadown: rgba(6, 167, 136, 0.12); // Updated shadow for current --Primary #06a788
-  --Secondary: #2c2e33;
+  --Secondary: #274C37;
   --Color-1: #06a788;
   --Color-2: #f2695c;
   --Color-3: #c79e34;
