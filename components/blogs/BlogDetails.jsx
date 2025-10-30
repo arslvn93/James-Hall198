@@ -5,11 +5,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "@/data/siteContent"; // Import centralized content
 // Removed blogs import
-
 export default function BlogDetails({ blog }) {
   const postDetails = siteContent.blog.postDetails.find(
     (post) => post.id === blog.id
   );
+  
+  // Construct share URLs
+  const blogUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const blogTitle = blog.title.replace("{Location}", siteContent.agent.location);
+  const encodedUrl = encodeURIComponent(blogUrl);
+  const encodedTitle = encodeURIComponent(blogTitle);
+  
+  const shareUrls = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    instagram: siteContent.agent.socialLinks.find(link => link.iconClass === 'icon-ins')?.url || '#'
+  };
 
   return (
     <section className="section-blog-details">
@@ -71,7 +83,7 @@ export default function BlogDetails({ blog }) {
                 </div>
               </div>
             </div>
-            <p className="fw-5 text-color-heading mb-30">
+            <p className="fw-5 text-color-heading mb-30" style={{ fontSize: '21px', lineHeight: '1.75', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               {postDetails?.paragraph1}
             </p>
             <div className="image-wrap mb-30">
@@ -84,7 +96,7 @@ export default function BlogDetails({ blog }) {
                 src={blog.imageSrc}
               />
             </div>
-            <div className="wrap-content mb-20" style={{ fontSize: '20px', lineHeight: '1.7' }}>
+            <div className="wrap-content mb-20" style={{ fontSize: '21px', lineHeight: '1.75', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               {postDetails?.paragraph2.split('\n').map((paragraph, index) => (
                 <p className="mb-20" key={index}>{paragraph}</p>
               ))}
@@ -93,12 +105,12 @@ export default function BlogDetails({ blog }) {
               <p>“{postDetails?.quote}”</p>
               <p className="author">{postDetails?.quoteAuthor}</p>
             </div>
-            <div className="wrap-content mb-30" style={{ fontSize: '20px', lineHeight: '1.7' }}>
+            <div className="wrap-content mb-30" style={{ fontSize: '21px', lineHeight: '1.75', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               {postDetails?.paragraph3.split('\n').map((paragraph, index) => (
                 <p className="mb-22" key={index}>{paragraph}</p>
               ))}
             </div>
-            <div className="wrap-content mb-30" style={{ fontSize: '20px', lineHeight: '1.7' }}>
+            <div className="wrap-content mb-30" style={{ fontSize: '21px', lineHeight: '1.75', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               {postDetails?.paragraph4.split('\n').map((paragraph, index) => (
                 <p className="mb-22" key={index}>{paragraph}</p>
               ))}
@@ -107,7 +119,7 @@ export default function BlogDetails({ blog }) {
               <p>“{postDetails?.quote2}”</p>
               <p className="author">{postDetails?.quoteAuthor2}</p>
             </div>
-            <div className="wrap-content mb-30" style={{ fontSize: '20px', lineHeight: '1.7' }}>
+            <div className="wrap-content mb-30" style={{ fontSize: '21px', lineHeight: '1.75', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
               {postDetails?.paragraph5.split('\n').map((paragraph, index) => (
                 <p className="mb-22" key={index}>{paragraph}</p>
               ))}
@@ -116,30 +128,30 @@ export default function BlogDetails({ blog }) {
               <div className="tags">
                 <p>Tags:</p>
                 <div className="tags">
-                  <a href="#">Personal</a>
-                  <a href="#">Business</a>
+                  <Link href="/blog?tag=personal">Personal</Link>
+                  <Link href="/blog?tag=business">Business</Link>
                 </div>
               </div>
               <div className="wrap-social">
                 <p>Share this post:</p>
                 <ul className="tf-social style-1">
                   <li>
-                    <a href="#">
+                    <a href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
                       <i className="icon-fb" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter/X">
                       <i className="icon-X" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href={shareUrls.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
                       <i className="icon-linked" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href={shareUrls.instagram} target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
                       <i className="icon-ins" />
                     </a>
                   </li>

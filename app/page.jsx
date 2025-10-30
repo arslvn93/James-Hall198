@@ -7,7 +7,6 @@ import Hero6 from "@/components/homes/home-6/Hero";
 import About6 from "@/components/homes/home-6/About";
 import Services6 from "@/components/homes/home-6/Services";
 import Projects6 from "@/components/homes/home-6/Projects";
-import Team6 from "@/components/homes/home-6/Team";
 import Testimonials6 from "@/components/homes/home-6/Testimonials";
 import Blogs6 from "@/components/homes/home-6/Blogs";
 import Contact6 from "@/components/homes/home-6/Contact";
@@ -15,7 +14,7 @@ import Contact6 from "@/components/homes/home-6/Contact";
 
 export const metadata = {
   title: `${siteContent.agent.name} - ${siteContent.agent.title}`,
-  description: `${siteContent.agent.name}, your trusted realtor for buying and selling homes in ${siteContent.agent.location}. ${siteContent.agent.experienceYears} years of local experience.`, // Construct description dynamically
+  description: `${siteContent.agent.name}, your trusted realtor for buying and selling homes in ${siteContent.agent.location}.`, // Removed experience years
 };
 
 export default function HomePage() {
@@ -29,7 +28,6 @@ export default function HomePage() {
         <About6 />
         <Services6 />
         <Projects6 />
-        <Team6 />
         <Testimonials6 />
         <Blogs6 />
         <Contact6 />

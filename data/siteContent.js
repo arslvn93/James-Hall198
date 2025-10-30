@@ -19,7 +19,7 @@ const agentDetails = {
   /** @type {string} Broader region served (if applicable, e.g., "Peel Region"). Used in FAQ. */
   region: "Greater Toronto Area",
   /** @type {number} Agent's years of experience. Used in About section, potentially counters. */
-  experienceYears: 10,
+  experienceYears: 3,
   /** @type {string} Agent's primary contact phone number. Used in Footer, Contact forms/sidebars. */
   phone: "416-564-5464",
   /** @type {string} Agent's primary contact email address. Used in Footer, Contact forms/sidebars. */
@@ -61,7 +61,7 @@ export const siteContent = {
     /** @type {string} Text appended to page-specific titles (e.g., "| Mike Henry - Brampton Realtor"). */
     baseTitleSuffix: `| ${agentDetails.name} - ${agentDetails.title}`, // Dynamically constructed
     /** @type {string} Default site description for SEO. Concise summary of agent/service/location (~15-25 words). */
-    baseDescription: `${agentDetails.name}, your trusted realtor for buying and selling homes in ${agentDetails.location}. ${agentDetails.experienceYears} years of local experience.`, // Dynamically constructed
+    baseDescription: `${agentDetails.name}, your trusted realtor for buying and selling homes in ${agentDetails.location}.`, // Dynamically constructed - removed experience years mention
   },
 
   /**
@@ -82,7 +82,7 @@ export const siteContent = {
         /** @type {string} Text for the main call-to-action button (~2-4 words). */
         buttonText: "Learn How I Can Help",
         /** @type {{src: string, alt: string}} Small image next to hero text. `src` relative to /public. */
-        smallImage: { src: "/images/page-title/gallery-1.jpg", alt: "Realtor Image" } // Placeholder - Constructed dynamically in Hero6.jsx
+        // Removed smallImage - gallery-1.jpg no longer used
       }
     ],
     /**
@@ -105,7 +105,7 @@ export const siteContent = {
        { src: "/images/page-title/pagi-thumbs-3.jpg", alt: "Abstract Texture" }
     ],
     /** @type {string} Label for the first counter below hero text. */
-    counter1Label: "Happy Clients", // Odometer component uses its own 'max' prop for the number.
+    counter1Label: "350+ clients served", // Odometer component uses its own 'max' prop for the number.
     /** @type {string} Label for the second counter below hero text. */
     counter2Label: `Years in ${agentDetails.location}`, // Dynamically construct the label
     /** @type {string} Placeholder text for the search input in the hero (~4-6 words). */
@@ -119,9 +119,9 @@ export const siteContent = {
    */
   about: {
     /** @type {string} Main heading for the section (~5-8 words). */
-    sectionTitle: `Experience and Dedication in ${agentDetails.location} Real Estate`, // Dynamically constructed
-    /** @type {string} Detailed introduction to the agent (first person, ~3-5 sentences / 300-500 chars). */
-    mainParagraph: `With ${agentDetails.experienceYears} years of dedicated experience in the ${agentDetails.location} market, I offer unparalleled local knowledge and a commitment to achieving your real estate goals. My client-first approach ensures clear communication and a seamless process whether you're buying or selling.`, // Dynamically constructed example
+    sectionTitle: `About Me`, // Consolidated section title
+    /** @type {string} Detailed introduction to the agent (first person). */
+    mainParagraph: `With a background rooted in hospitality and a career built on results, I believe real estate is about more than just transactions, it's about tailoring every step of the process to fit my clients' unique goals. Born and raised in Toronto, I bring hyper-local knowledge of the GTA and a deep understanding of its ever-evolving market. Whether you're buying, selling, or investing, I don't believe in one size fits all solutions. I use a data-driven approach and leverage every tool at my disposal, from in-depth market analytics to both on- and off market inventory, I ensure my clients are always making informed, strategic decisions. My job is to give you every possible advantage, and that means delivering the right opportunities, at the right time, with the right strategy. I pride myself on offering a white-glove experience and building long-term relationships rooted in trust, transparency, and exceptional service. Your real estate journey is one of the most important investments you'll make and I'm here to help you make it with clarity and confidence.`, // Full bio content
     /** @type {string} Label for the phone number link. */
     callLabel: "Call Agent", // Placeholder - Constructed dynamically in About6.jsx
     /** @type {string} Label for the email link. */
@@ -134,10 +134,9 @@ export const siteContent = {
     expertiseIntro: `I offer specialized real estate services tailored to the ${agentDetails.location} market:`, // Dynamically constructed
     /** @type {string[]} List of key service areas (~3-5 items, ~2-4 words each). */
     expertiseItems: [
-      "Residential Sales and Leasing",
-      "Commercial Real Estate",
-      "Property Management",
-      "Investment Advisory"
+      "Buyers",
+      "Sellers",
+      "Investors"
     ],
     /** @type {string} Path for the larger image in this section. Relative to /public. */
     image1Src: "/images/section/section-find-home-2.jpg",
@@ -152,7 +151,7 @@ export const siteContent = {
     /** @type {string} Main heading for the section (~4-6 words). */
     sectionTitle: "Client-Focused Real Estate Services",
     /** @type {string} Description elaborating on service philosophy (~2-3 sentences / 150-250 chars). */
-    introParagraph: `My focus is on providing exceptional, personalized service to every client. I leverage my ${agentDetails.experienceYears} years of ${agentDetails.location} market knowledge to ensure you make informed decisions and achieve the best possible outcome.`, // Dynamically constructed
+    introParagraph: `My focus is on providing exceptional, personalized service to every client. I leverage my deep ${agentDetails.location} market knowledge to ensure you make informed decisions and achieve the best possible outcome.`, // Removed experience years
     /** @type {string} Text for the button at the bottom of the section. */
     buttonText: "Explore My Services",
     /**
@@ -160,10 +159,10 @@ export const siteContent = {
      * @type {Array<{id: number, icon: string, title: string, description: string, imageSrc: string, delay: string}>}
      */
     items: [
-      // Guidance: Provide concise title (2-4 words) & description (1 sentence / ~100-150 chars) for ~3 key services.
-      { id: 1, icon: "icon-house-2", title: "Residential Sales and Leasing", description: "Assisting clients in buying, selling, and leasing residential properties such as houses, apartments, and condominiums", imageSrc: "/images/section/service-1.jpg", delay: "0.1s" },
-      { id: 2, icon: "icon-house-3", title: "Commercial Real Estate Services", description: "Facilitating transactions related to commercial properties such as office buildings, retail spaces, industrial warehouses, land for development", imageSrc: "/images/section/service-2.jpg", delay: "0.2s" },
-      { id: 3, icon: "icon-house-4", title: "Property Management", description: "Managing properties on behalf of owners, including tenant screening, rent collection, maintenance, and financial reporting", imageSrc: "/images/section/service-3.jpg", delay: "0.3s" }
+      // Focus on three main service categories: Buyers, Sellers, Investors
+      { id: 1, icon: "icon-house-2", title: "Buyers", description: "Comprehensive support for home buyers, from property searches and market analysis to expert negotiation and smooth closing. I help you find the perfect home that fits your budget and lifestyle.", imageSrc: "/images/section/service-1.jpg", delay: "0.1s" },
+      { id: 2, icon: "icon-house-3", title: "Sellers", description: "Strategic pricing, professional staging advice, targeted marketing, and skilled negotiation to get you the best price. I manage the entire selling process from listing to closing.", imageSrc: "/images/section/service-2.jpg", delay: "0.2s" },
+      { id: 3, icon: "icon-house-4", title: "Investors", description: "Expert investment advisory services to help you identify profitable opportunities in the Toronto real estate market. Data-driven insights and strategic guidance for your investment goals.", imageSrc: "/images/section/service-3.jpg", delay: "0.3s" }
     ]
   },
 
@@ -176,7 +175,7 @@ export const siteContent = {
     /** @type {string} Short introductory text below the heading (~1 sentence / 50-100 chars). */
     description: `Your trusted guide for buying and selling in ${agentDetails.location}.`, // Dynamically constructed
     /** @type {string} Text displayed below the agent's name in the slider card (~5-8 words). */
-    agentDescription: `Your ${agentDetails.location} Realtor - ${agentDetails.experienceYears} Years Experience`, // Dynamically constructed
+    agentDescription: `Your ${agentDetails.location} Realtor`, // Removed experience years
     /** @type {string} Text for the button at the bottom. */
     buttonText: "Learn About My Approach"
     // Note: Team6.jsx component now uses siteContent.agent directly for name/image.
@@ -218,10 +217,16 @@ export const siteContent = {
      * @type {Array<{id: number, description: string, avatar: string, name: string, role: string}>}
      */
     items: [
-      // Guidance: Provide 3 genuine-sounding testimonials (~2-4 sentences / 150-300 chars each). Use placeholder avatar paths.
-      { id: 1, description: `${agentDetails.name} made buying our first home in ${agentDetails.location} so easy! His knowledge and patience were invaluable. Highly recommended!`, avatar: "/images/avatar/testimonials-3.jpg", name: "Sarah & Tom P.", role: `First-Time Homebuyers, ${agentDetails.location}` }, // Dynamically constructed
-      { id: 2, description: `Selling our house with ${agentDetails.firstName} was a great experience. He got us a fantastic price and handled everything professionally. Thanks, ${agentDetails.firstName}!`, avatar: "/images/avatar/testimonials-2.jpg", name: "David R.", role: `Home Seller, ${agentDetails.location}` }, // Dynamically constructed
-      { id: 3, description: `As an investor, I rely on ${agentDetails.firstName}'s expertise of the ${agentDetails.location} market. He consistently finds great opportunities. A true professional.`, avatar: "/images/avatar/testimonials-4.jpg", name: "Priya K.", role: "Real Estate Investor" } // Dynamically constructed
+      // Real client testimonials
+      { id: 1, description: "Where do I even start? James was absolutely amazing and truly the reason we didn't lose our minds during the stressful process of buying our new home. From day one, he guided us through every step, patiently explaining how everything worked and what to expect. We never once felt rushed or pressured to make a decision. He really took the time to understand what we were looking for and was incredibly knowledgeable about the different areas, upcoming projects, and all the little details that helped us make the right choice. James was always there for us — quick to respond to calls and emails, always on time, and genuinely caring. You can tell he loves what he does and truly wants the best for his clients. We couldn't recommend him enough to anyone looking to buy or rent a home.", avatar: "/images/avatar/testimonials-1.jpg", name: "Meriana H.", role: "Home Buyer" },
+      { id: 2, description: "Working with James made the overwhelming process of selling my dad's house seamless and smooth. He was with us every step of the way, offering guidance, resources and encouragement. His impeccable attention to detail and focus on helping us understand and make active choices in the process was incredible. While selling a home is always a bit stressful, James brought a great calming steadiness and it was the best real estate experience I've ever had. I would recommend him to anyone who wants a hands on and professional representative working on their side!", avatar: "/images/avatar/testimonials-2.jpg", name: "Rachel K.", role: "Home Seller" },
+      { id: 3, description: "Searching for a condo in downtown Toronto is no easy task. We enlisted the expertise of James Hall. He was knowledgeable, professional, patient and accommodating. He answered all of questions and concerns diligently. We would absolutely recommend James to anyone looking to purchase or rent in the downtown area.", avatar: "/images/avatar/testimonials-3.jpg", name: "Jade, Stefano, Sofia & Nate", role: "Condo Buyers" },
+      { id: 4, description: "We have been using James's services for a few years, we are extremely satisfied with his services. James is very knowledgeable, professional, detail oriented and also very patient and kind. If you are reaching for an excellent realtor, James would be the one.", avatar: "/images/avatar/testimonials-4.jpg", name: "Mao Nan J.", role: "Long-term Client" },
+      { id: 5, description: "We had a great experience working with him. He was very friendly and polite, and we were so impressed with how quickly he responded to our calls, text messages and emails. He made the process of finding a new home smooth, and we are so happy with the wonderful place we got. He even change the light fixture in the washroom and fixed the shower for free!! Highly recommend!", avatar: "/images/avatar/avatar-1.jpg", name: "Kanako T.", role: "Home Buyer" },
+      { id: 6, description: "James Hall was an excellent agent to work with. I had almost no idea about the process of buying a condo, but he took the time to explain everything clearly and kept me well-informed. He was always helpful, knowledgeable, and made the experience much easier. I really appreciated his professionalism and would gladly recommend him to others.", avatar: "/images/avatar/avatar-2.jpg", name: "Rafa P.", role: "First-Time Condo Buyer" },
+      { id: 7, description: "James was an outstanding professional. I've worked with James twice now and would work with him again. He helped us find our rental when we moved to the GTA from Ottawa, and more recently helped us purchase our first home. He took the time to explain the purchase process in detail so we were confident in moving forward at each stage. James was very responsive and knowledgeable and about to help with any issues we had from before and after closing. I'd recommend James to anyone looking for an agent.", avatar: "/images/avatar/avatar-3.jpg", name: "Michael D.", role: "Rental & Home Buyer" },
+      { id: 8, description: "James was amazing! He was so professional, knowledgeable, and supportive in my search for a new tenant. He walked me through the whole process from start to finish. He made himself readily available which made the process quick. I highly recommend his services and will definitely hire him again when I'm ready to sell the property.", avatar: "/images/avatar/avatar-5.jpg", name: "Elaine S.", role: "Property Owner" },
+      { id: 9, description: "James was phenomenal to work with. Exactly 1 week after our initial phone call with James explaining everything we wanted in a house, we signed a lease for our dream apartment. James made the process super easy and straightforward, answering all our questions in a timely manner and he was able to work with our schedules to book showings. We highly recommend working with James and we will definitely do so again in the future.", avatar: "/images/avatar/avatar-6.jpg", name: "Mary-Lynn V.", role: "Rental Client" }
     ]
   },
 
@@ -321,10 +326,10 @@ export const siteContent = {
         title: "About The Agent & Services", // Placeholder
         idPrefix: "faq-serv", // Unique prefix for accordion targeting
         questions: [
-          { id: "faq-q1", question: "What areas do you specialize in?", answer: `I specialize in residential real estate throughout ${agentDetails.location} and the surrounding ${agentDetails.region}. With ${agentDetails.experienceYears} years focused specifically on this area, I have deep knowledge of its diverse neighbourhoods and market dynamics.` }, // Dynamically constructed
+          { id: "faq-q1", question: "What areas do you specialize in?", answer: `I specialize in residential real estate throughout ${agentDetails.location} and the surrounding ${agentDetails.region}. I have deep knowledge of its diverse neighbourhoods and market dynamics.` }, // Removed experience years
           { id: "faq-q2", question: "What services do you offer for buyers?", answer: "I provide comprehensive support for buyers, including personalized property searches based on your needs, market analysis, expert negotiation, guidance through inspections and financing, and ensuring a smooth closing process." },
           { id: "faq-q3", question: "How do you help home sellers?", answer: "For sellers, I offer strategic pricing analysis, professional home staging advice, targeted marketing campaigns across multiple platforms, skilled negotiation to get you the best price, and management of the entire selling process from listing to closing." },
-          { id: "faq-q4", question: "What makes you different from other realtors?", answer: `My ${agentDetails.experienceYears} years of dedicated experience in ${agentDetails.location}, combined with a client-first approach built on communication and trust, sets me apart. I'm committed to providing personalized service and achieving outstanding results for every client I work with.` } // Dynamically constructed
+          { id: "faq-q4", question: "What makes you different from other realtors?", answer: `My dedicated experience in ${agentDetails.location}, combined with a client-first approach built on communication and trust, sets me apart. I'm committed to providing personalized service and achieving outstanding results for every client I work with.` } // Removed experience years
         ]
       },
       {

@@ -10,14 +10,13 @@ export default function About() {
             <div className="box-dream-home">
               <div className="left scroll-effect">
                 <div className="text-display-4 text_white title text-change-color">
-                  {`Experience and Dedication in ${siteContent.agent.location} Real Estate`}
+                  {siteContent.about.sectionTitle}
                 </div>
                 <p
                   className="text-1 text-color1 description wow animate__fadeInUp animate__animated"
                   data-wow-delay="0.3s"
                 >
-                  {/* Using template literals to insert dynamic data if needed, or just use the full string */}
-                  {`Hi, I'm ${siteContent.agent.firstName}. For the past ${siteContent.agent.experienceYears} years, I've been passionately helping clients navigate the ${siteContent.agent.location} real estate market. My approach is built on trust, transparency, and a deep commitment to achieving your specific goals, whether you're buying your first home, selling a cherished property, or seeking investment opportunities.`}
+                  {siteContent.about.mainParagraph}
                 </p>
                 <div
                   className="wrap-contact-item wow animate__fadeInUp animate__animated"

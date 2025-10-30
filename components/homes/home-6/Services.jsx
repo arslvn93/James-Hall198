@@ -4,6 +4,7 @@ import { siteContent } from "@/data/siteContent"; // Import centralized content
 // Removed services import
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import Link from "next/link";
 import SplitTextAnimation from "@/components/common/SplitTextAnimation";
 import { Pagination } from "swiper/modules";
 export default function Services() {
@@ -21,7 +22,7 @@ export default function Services() {
                 data-wow-duration="1.5s"
                 data-wow-delay="0s"
               >
-                {`My focus is on providing exceptional, personalized service to every client. I leverage my ${siteContent.agent.experienceYears} years of ${siteContent.agent.location} market knowledge to ensure you make informed decisions and achieve the best possible outcome.`}
+                {siteContent.services.introParagraph}
               </p>
             </div>
             <Swiper
@@ -68,9 +69,9 @@ export default function Services() {
                     </div>
                     <div className="content text-center">
                       <div className="text-11 fw-6 text_white title mb-16">
-                        <a href="#" className="text_white link">
+                        <Link href="/contact" className="text_white link">
                           {service.title}
-                        </a>
+                        </Link>
                       </div>
                       <p className="text-1 text-color1">
                         {service.description}

@@ -52,20 +52,19 @@ export default function Testimonials() {
               <SwiperSlide key={slide.id} className="swiper-slide">
                 <div className="wg-testimonial style-5">
                   <p className="text-11 description text_white fw-3">
-                    {/* Dynamically construct testimonial if it contains the agent's name */}
-                    {slide.id === 2 ? `Selling our house with ${siteContent.agent.firstName} was a great experience. He got us a fantastic price and handled everything professionally. Thanks, ${siteContent.agent.firstName}!` : slide.description}
+                    {slide.description}
                   </p>
                   <div className="author">
                     <div className="avatar">
-                      <Image alt={slide.name} width={51} height={51} src={slide.avatar} /> {/* Use name for alt */}
+                      <Image alt={slide.name} width={51} height={51} src={slide.avatar} />
                     </div>
                     <div className="content">
                       <div className="name text-1">
-                        <a href="#" className="text_white link">
-                          {slide.name} {/* Data from siteContent */}
-                        </a>
+                        <span className="text_white">
+                          {slide.name}
+                        </span>
                       </div>
-                      <p className="text-color2">{slide.id === 1 ? `First-Time Homebuyers, ${siteContent.agent.location}` : slide.id === 2 ? `Home Seller, ${siteContent.agent.location}` : slide.role}</p> {/* Construct role dynamically */}
+                      <p className="text-color2">{slide.role}</p>
                     </div>
                   </div>
                 </div>

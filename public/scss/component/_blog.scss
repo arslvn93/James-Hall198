@@ -458,18 +458,38 @@
             object-fit: cover;
         }
     }
-    .quote {
-        padding: 27px 25px 26px;
-        background-color: var(--Color-6);
-        border-left: 4px solid var(--Primary);
-        border-radius: 10px;
-        margin-bottom: 20px;
+    p.fw-5.text-color-heading {
+        font-size: 21px !important;
+        line-height: 1.75 !important;
+        font-family: system-ui, -apple-system, sans-serif !important;
+    }
+    .wrap-content {
         p {
-            color: var(--Primary);
+            font-size: 21px !important;
+            line-height: 1.75 !important;
+            font-family: system-ui, -apple-system, sans-serif !important;
+        }
+    }
+    .quote {
+        padding: 20px 24px;
+        background-color: transparent;
+        border-left: 3px solid var(--Primary);
+        border-radius: 4px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        p {
+            color: var(--Heading);
+            font-size: 21px !important;
+            line-height: 1.75 !important;
+            font-style: italic;
+            margin-bottom: 12px;
         }
         .author {
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: 12px;
+            color: var(--Primary);
+            font-size: 18px !important;
+            font-style: normal;
         }
     }
     .group-image {

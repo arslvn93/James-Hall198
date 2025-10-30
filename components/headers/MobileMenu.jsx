@@ -45,10 +45,10 @@ export default function MobileMenu() {
             ))}
           </ul>
           <div className="support">
-            <a href="#" className="text-need">
+            <Link href="/contact" className="text-need">
               {" "}
               Need help?
-            </a>
+            </Link>
             <ul className="mb-info">
               <li>
                 Call Us Now: <a href={`tel:${siteContent.agent.phone}`} className="number">{siteContent.agent.phone}</a>

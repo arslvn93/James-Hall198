@@ -4,7 +4,7 @@ export const footerData = [
     links: [
       { text: "Contact", href: "/contact" },
       { text: "Why choose us?", href: "/service-details" },
-      { text: "Customer reviews", href: "#" },
+      { text: "Customer reviews", href: "/contact" },
       { text: "Our team", href: "/agents" },
       { text: "Careers with realty", href: "/career" },
       { text: "Work with us", href: "/career" },
@@ -25,11 +25,11 @@ export const footerData = [
   {
     title: "Quick links",
     links: [
-      { text: "Terms of use", href: "#" },
-      { text: "Privacy policy", href: "#" },
-      { text: "Our services", href: "#" },
+      { text: "Terms of use", href: "/terms-of-service" },
+      { text: "Privacy policy", href: "/privacy-policy" },
+      { text: "Our services", href: "/contact" },
       { text: "Contact support", href: "/contact" },
-      { text: "Pricing plans", href: "#" },
+      { text: "Pricing plans", href: "/contact" },
       { text: "FAQs", href: "/faq" },
     ],
     className: "style-2",

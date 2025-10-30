@@ -43,14 +43,6 @@ export default function Hero() {
                           ></div>
                         </div>
                         <div className="item flex-wrap-sm">
-                          <div className="img-wrap effect-item effect-left effect-2">
-                            <Image
-                              alt={`${siteContent.agent.name} Realtor`} // Construct alt text dynamically
-                              width={214} // Keep original dimensions? Or make configurable? Keep for now.
-                              height={209}
-                              src={siteContent.hero.slides[0].smallImage.src} // Use src from siteContent
-                            />
-                          </div>
                           <div className="content effect-item effect-up effect-3">
                             <p className="text-1">{siteContent.hero.slides[0].description}</p>
                             <a
@@ -78,7 +70,7 @@ export default function Hero() {
                       <div className="count">
                         <div className="counter-number">
                           <div className="odometer style-3 style-3-1">
-                            <OdometerComponent max={250} /> {/* Keep Odometer, value could be added to siteContent if needed */}
+                            <OdometerComponent max={350} /> {/* Updated to 350 clients */}
                           </div>
                           <span className="sub plus">+</span>
                         </div>
