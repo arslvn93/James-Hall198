@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import "../public/main.scss";
 import "odometer/themes/odometer-theme-default.css"; // Import theme
 import "photoswipe/style.css";
@@ -14,7 +14,6 @@ import Register from "@/components/modals/Register";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const wowInstanceRef = useRef(null);
   if (typeof window !== "undefined") {
     import("bootstrap/dist/js/bootstrap.esm").then((module) => {
       // Module is imported, you can access any exported functionality if
@@ -42,12 +41,6 @@ export default function RootLayout({ children }) {
   }, [pathname]); // Runs every time the route changes
 
   useEffect(() => {
-    // Stop previous WOW instance if it exists
-    if (wowInstanceRef.current) {
-      wowInstanceRef.current.stop();
-    }
-
-    // Initialize new WOW instance
     const WOW = require("@/utlis/wow");
     const wow = new WOW.default({
       animateClass: "animated",
@@ -56,15 +49,6 @@ export default function RootLayout({ children }) {
       live: false,
     });
     wow.init();
-    wowInstanceRef.current = wow;
-
-    // Cleanup function to stop WOW instance on unmount
-    return () => {
-      if (wowInstanceRef.current) {
-        wowInstanceRef.current.stop();
-        wowInstanceRef.current = null;
-      }
-    };
   }, [pathname]);
   useEffect(() => {
     const handleSticky = () => {
