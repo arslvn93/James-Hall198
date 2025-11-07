@@ -17,7 +17,7 @@ export default function Contact() {
   );
 
   return (
-    <section className="section-contact style-1 tf-spacing-7">
+    <section id="contact" className="section-contact style-1 tf-spacing-7">
       <div className="tf-container">
         <div className="row">
           <div className="wrap">
@@ -116,7 +116,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div className="content">
-                      <div className="sub text-color2">Office address</div>
+                      <div className="sub text-color2">Cell Number</div>
                       <div className="phone">{siteContent.agent.phone}</div>
                     </div>
                   </li>
@@ -192,7 +192,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div className="content">
-                      <div className="sub text-color2">Email us</div>
+                      <div className="sub text-color2">Email Me</div>
                       <a href={`mailto:${siteContent.agent.email}`}>{siteContent.agent.email}</a>
                     </div>
                   </li>

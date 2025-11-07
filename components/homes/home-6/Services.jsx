@@ -84,8 +84,15 @@ export default function Services() {
               <div className="sw-pagination sw-pagination-layout text-center mt-20 spd16" />
             </Swiper>
             <a
-              href="/contact"
+              href="#contact"
               className="tf-btn bg-color-primary height-1 pd-25 rounded-cycle mx-auto btn-border"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
             >
               {siteContent.services.buttonText} <i className="icon-arrow-right-3" />
             </a>

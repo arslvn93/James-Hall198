@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Removed AppraisalBanner component */}
         <About6 />
         <Services6 />
-        <Projects6 />
+        {/* <Projects6 /> */}
         <Testimonials6 />
         <Blogs6 />
         <Contact6 />

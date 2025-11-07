@@ -61,13 +61,15 @@ export default function MobileMenu() {
                   <p>Follow us:</p>
                   {/* Dynamically generate social links */}
                   <ul className="tf-social style-2">
-                    {siteContent.agent.socialLinks.map((link, index) => (
-                      <li key={index}>
-                        <a href={link.url} target="_blank" rel="noopener noreferrer">
-                          <i className={link.iconClass} />
-                        </a>
-                      </li>
-                    ))}
+                    {siteContent.agent.socialLinks
+                      .filter((link) => link.name !== "Twitter") // Hide Twitter/X
+                      .map((link, index) => (
+                        <li key={index}>
+                          <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            <i className={link.iconClass} />
+                          </a>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </li>

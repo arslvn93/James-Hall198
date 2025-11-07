@@ -24,7 +24,7 @@ export default function Faqs() {
         {
           id: "faq-q1",
           question: "What areas do you specialize in?",
-          answer: `I specialize in residential real estate throughout ${siteContent.agent.location} and the surrounding ${siteContent.agent.region}. With ${siteContent.agent.experienceYears} years focused specifically on this area, I have deep knowledge of its diverse neighbourhoods and market dynamics.`,
+          answer: `I specialize in residential real estate throughout ${siteContent.agent.location} and the surrounding ${siteContent.agent.region}. As a lifelong ${siteContent.agent.location} resident, I have deep knowledge of its diverse neighbourhoods and market dynamics.`,
           active: true, // Make the first question active by default
         },
         {
@@ -40,7 +40,7 @@ export default function Faqs() {
         {
           id: "faq-q4",
           question: "What makes you different from other realtors?",
-          answer: `My ${siteContent.agent.experienceYears} years of dedicated experience in ${siteContent.agent.location}, combined with a client-first approach built on communication and trust, sets me apart. I'm committed to providing personalized service and achieving outstanding results for every client I work with.`,
+          answer: `My dedicated experience in ${siteContent.agent.location}, combined with a client-first approach built on communication and trust, sets me apart. As a lifelong ${siteContent.agent.location} resident, I'm committed to providing personalized service and achieving outstanding results for every client I work with.`,
         },
       ],
     },

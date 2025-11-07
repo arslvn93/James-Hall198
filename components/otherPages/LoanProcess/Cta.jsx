@@ -33,7 +33,7 @@ export default function Cta() {
                   data-wow-duration="1s"
                   data-wow-delay="0s"
                 >
-                  {`Contact ${siteContent.agent.firstName} Today`}
+                  {siteContent.common.ctaButtonText}
                   <i className="icon-MagnifyingGlass fw-6" />
                 </a>
               </div>

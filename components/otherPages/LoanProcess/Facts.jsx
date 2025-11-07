@@ -47,32 +47,17 @@ export default function Facts() {
                   <div className="count">
                     <div className="icons"><i className="icon-user-2" /></div> {/* Example icon */}
                     <div className="counter-number">
-                      <div className="odometer style-2 style-2-1"><OdometerComponent max={250} /></div> {/* Placeholder value */}
+                      <div className="odometer style-2 style-2-1"><OdometerComponent max={350} /></div> {/* Standardized to match hero section */}
                       <span className="sub plus">+</span>
                     </div>
                     <p className="text-4">{siteContent.loanProcess.factsCounter1Label}</p>
                   </div>
                 </div>
-                 {/* Counter 2: Years Experience */}
+                 {/* Counter 2: Removed - replaced with text-only label */}
                  <div className="counter-item style-2">
                   <div className="count">
-                    <div className="icons"><i className="icon-HouseLine" /></div> {/* Changed icon */}
-                    <div className="counter-number">
-                      <div className="odometer style-2 style-2-1"><OdometerComponent max={siteContent.agent.experienceYears} /></div>
-                      <span className="sub plus">+</span>
-                    </div>
+                    <div className="icons"><i className="icon-HouseLine" /></div>
                     <p className="text-4">{siteContent.loanProcess.factsCounter2Label}</p>
-                  </div>
-                </div>
-                 {/* Counter 3: Properties Sold */}
-                 <div className="counter-item style-2">
-                  <div className="count">
-                    <div className="icons"><i className="icon-house" /></div> {/* Example icon */}
-                    <div className="counter-number">
-                      <div className="odometer style-2 style-2-1"><OdometerComponent max={3600} /></div> {/* Placeholder value */}
-                       {/* Removed subNumber logic for simplicity */}
-                    </div>
-                    <p className="text-4">{siteContent.loanProcess.factsCounter3Label}</p>
                   </div>
                 </div>
               </div>

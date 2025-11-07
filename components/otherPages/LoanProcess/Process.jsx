@@ -14,7 +14,7 @@ export default function Process() {
                 data-wow-duration="1s"
                 data-wow-delay="0s"
               >
-                {`Selling Your Home With ${siteContent.agent.name}`}
+                {siteContent.loanProcess.processTitle}
               </h2>
               <p
                 className="text-1 wow animate__fadeInUp animate__animated"
@@ -71,13 +71,13 @@ export default function Process() {
                     </svg>
                   </div>
                   <h5 className="title text-center">
-                    <a href="#">Complete The Questionnaire</a>
+                    <Link href="/contact">Initial Consultation</Link>
                   </h5>
                   <span className="line" />
                   <p className="text-1 text-center">
-                    {siteContent.loanProcess.processStepDescription}
+                    We'll discuss your needs, budget, timeline, and preferences to create a personalized buying strategy.
                   </p>
-                  <a href="#" className="tf-btn-link mx-auto">
+                  <Link href="/contact" className="tf-btn-link mx-auto">
                     <span> Read More </span>
                     <svg
                       width={20}
@@ -164,13 +164,13 @@ export default function Process() {
                     </svg>
                   </div>
                   <h5 className="title text-center">
-                    <a href="#">Get Financial Connections</a>
+                    <Link href="/contact">Property Search & Viewings</Link>
                   </h5>
                   <span className="line" />
                   <p className="text-1 text-center">
-                    {siteContent.loanProcess.processStepDescription}
+                    I'll search the market using both on-market and off-market inventory to find properties that match your criteria.
                   </p>
-                  <a href="#" className="tf-btn-link mx-auto">
+                  <Link href="/contact" className="tf-btn-link mx-auto">
                     <span> Read More </span>
                     <svg
                       width={20}
@@ -257,13 +257,13 @@ export default function Process() {
                     </svg>
                   </div>
                   <h5 className="title text-center">
-                    <a href="#">Receive Your Custom Quote</a>
+                    <Link href="/contact">Offer & Negotiation</Link>
                   </h5>
                   <span className="line" />
                   <p className="text-1 text-center">
-                    {siteContent.loanProcess.processStepDescription} {/* Already using siteContent, no change needed here unless content itself needs update */}
+                    I'll help you craft a competitive offer and negotiate the best terms, using market data and strategic insights.
                   </p>
-                  <a href="#" className="tf-btn-link mx-auto">
+                  <Link href="/contact" className="tf-btn-link mx-auto">
                     <span> Read More </span>
                     <svg
                       width={20}

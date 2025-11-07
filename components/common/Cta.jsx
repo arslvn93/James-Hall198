@@ -1,7 +1,24 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteContent } from "@/data/siteContent"; // Import centralized content
+
 export default function Cta() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  
+  const handleClick = (e) => {
+    if (isHomePage) {
+      e.preventDefault();
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
   return (
     <section className="section-CTA">
       <div className="tf-container">
@@ -22,10 +39,14 @@ export default function Cta() {
                   {siteContent.common.ctaDescription}
                 </p>
               </div>
-              <a href="/contact" className="tf-btn style-2 fw-6">
-                {`Contact ${siteContent.agent.firstName} Today`}
+              <Link 
+                href={isHomePage ? "#contact" : "/contact"} 
+                className="tf-btn style-2 fw-6"
+                onClick={handleClick}
+              >
+                {siteContent.common.ctaButtonText}
                 <i className="icon-MagnifyingGlass fw-6" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

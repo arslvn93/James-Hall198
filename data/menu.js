@@ -1,8 +1,5 @@
 export const navLinks = [
-  { href: "/seller-guide", label: "Buyers & Sellers" }, // Renamed URL
-  { href: "/blog", label: "Blog" }, // Changed URL from /blog-grid
-  { href: "/faq", label: "FAQs" },
-  { href: "/contact", label: "Contact" } // Added contact link
+  { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" }
 ];
-
-// Removed homes, otherPages, blogMenu as they are replaced by navLinks

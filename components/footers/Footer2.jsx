@@ -114,13 +114,15 @@ export default function Footer2({ parentClass = "" }) {
             <div className="wrap-social">
               <div className="text-3 fw-6 text_white">Follow Me:</div> {/* Added colon */}
               <ul className="tf-social">
-                {siteContent.agent.socialLinks.map((link, index) => (
-                  <li key={index}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <i className={link.iconClass} />
-                    </a>
-                  </li>
-                ))}
+                {siteContent.agent.socialLinks
+                  .filter((link) => link.name !== "Twitter") // Hide Twitter/X
+                  .map((link, index) => (
+                    <li key={index}>
+                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        <i className={link.iconClass} />
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>

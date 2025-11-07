@@ -38,10 +38,10 @@ const agentDetails = {
    */
   socialLinks: [
     // Provide actual URLs for the agent's profiles
-    { name: "Facebook", url: "#", iconClass: "icon-fb" },
+    { name: "Facebook", url: "https://www.facebook.com/profile.php?id=100089283990835", iconClass: "icon-fb" },
     { name: "Twitter", url: "#", iconClass: "icon-X" },
-    { name: "LinkedIn", url: "#", iconClass: "icon-linked" },
-    { name: "Instagram", url: "#", iconClass: "icon-ins" }
+    { name: "LinkedIn", url: "https://ca.linkedin.com/in/james-hall-22b37312a", iconClass: "icon-linked" },
+    { name: "Instagram", url: "https://www.instagram.com/realestatewithjames/", iconClass: "icon-ins" }
   ]
 };
 
@@ -80,7 +80,7 @@ export const siteContent = {
         /** @type {string} Short introductory paragraph (~2-3 sentences / 150-250 chars). */
         description: "Mission: To put you in the home of your dreams as quickly as possible!", // Resolved: Kept remote change
         /** @type {string} Text for the main call-to-action button (~2-4 words). */
-        buttonText: "Learn How I Can Help",
+        buttonText: "Book a Call",
         /** @type {{src: string, alt: string}} Small image next to hero text. `src` relative to /public. */
         // Removed smallImage - gallery-1.jpg no longer used
       }
@@ -107,11 +107,11 @@ export const siteContent = {
     /** @type {string} Label for the first counter below hero text. */
     counter1Label: "350+ clients served", // Odometer component uses its own 'max' prop for the number.
     /** @type {string} Label for the second counter below hero text. */
-    counter2Label: `Years in ${agentDetails.location}`, // Dynamically construct the label
+    counter2Label: `Lifelong ${agentDetails.location} Resident`, // Replaced years with resident status
     /** @type {string} Placeholder text for the search input in the hero (~4-6 words). */
     searchPlaceholder: `Interested in ${agentDetails.location} Real Estate?`, // Dynamically construct the placeholder
     /** @type {string} Text for the search button in the hero (~1-3 words). */
-    searchButtonText: "Get Started Today"
+    searchButtonText: "Browse Properties"
   },
 
   /**
@@ -153,7 +153,7 @@ export const siteContent = {
     /** @type {string} Description elaborating on service philosophy (~2-3 sentences / 150-250 chars). */
     introParagraph: `My focus is on providing exceptional, personalized service to every client. I leverage my deep ${agentDetails.location} market knowledge to ensure you make informed decisions and achieve the best possible outcome.`, // Removed experience years
     /** @type {string} Text for the button at the bottom of the section. */
-    buttonText: "Explore My Services",
+    buttonText: "Book a Call",
     /**
      * @description Details for each service displayed in the slider.
      * @type {Array<{id: number, icon: string, title: string, description: string, imageSrc: string, delay: string}>}
@@ -371,29 +371,29 @@ export const siteContent = {
    */
   loanProcess: {
     /** @type {string} Heading for the "Facts" section. */
-    factsTitle: "I Am Here to Help",
+    factsTitle: "My Home Buying Strategy",
     /** @type {string} First paragraph in the "Facts" section. */
-    factsDescription1: "The home loan process can feel overwhelming, but I will help you stay informed throughout, from pre-approval to closing. The first step is consulting with a mortgage specialist. If you don't have one, I partner with some of the best lenders in the industry and would be happy to introduce you.",
+    factsDescription1: `Buying a home in ${agentDetails.location} is an exciting journey, and I'm here to guide you every step of the way. From understanding your needs and budget to finding the perfect property and negotiating the best deal, I'll ensure you make informed decisions throughout the process.`,
     /** @type {string} Second paragraph in the "Facts" section. */
     factsDescription2: `I stand ready to serve you as your dedicated ${agentDetails.location} real estate agent.`, // Dynamically constructed
     /** @type {string} Button text in the "Facts" section. */
-    factsButtonText: "About The Agent", // Placeholder - Constructed dynamically in LoanProcess/Facts.jsx
+    factsButtonText: "About The Agent",
     /** @type {string} Label for the first counter in the "Facts" section. */
     factsCounter1Label: "Clients Served",
-    /** @type {string} Label for the second counter (uses agent.experienceYears for value). */
-    factsCounter2Label: "Years Experience",
+    /** @type {string} Label for the second counter (text only, no number). */
+    factsCounter2Label: "Lifelong Toronto Resident & Trusted Local Expert",
     /** @type {string} Label for the third counter. */
     factsCounter3Label: "Properties Sold",
     /** @type {string} Heading for the "Process" section. */
-    processTitle: `Selling Your Home With ${agentDetails.name}`, // Dynamically constructed
+    processTitle: `My 5-Step Home Buying Strategy`, // Dynamically constructed
     /** @type {string} Introductory text for the "Process" section. */
-    processDescription: "I'll get to know you to understand your selling goals, and explain the selling process so you know what to expect.",
+    processDescription: `I'll work closely with you to understand your goals, preferences, and timeline. Together, we'll navigate the ${agentDetails.location} market with confidence and clarity.`,
     /** @type {string} Text used below each of the 3 process steps. */
-    processStepDescription: "Your responses will help connect you with the right resources. Shortly after your lender is selected, they'll contact you to discuss options for financing your future home.",
+    processStepDescription: "I'll guide you through each step, ensuring you have all the information and support needed to make the best decisions for your real estate journey.",
     /** @type {string} Heading for the "Loan Calculator" section. */
-    calculatorTitle: "Calculate Mortgage Payments",
+    calculatorTitle: "Mortgage Calculator",
     /** @type {string} Text below the calculator heading. */
-    calculatorDescription: "Estimate your payment with this easy-to-use loan calculator. Then, let me connect you with a trusted local lender for pre-qualification."
+    calculatorDescription: "Use this calculator to estimate your monthly mortgage payments. If you need financing assistance, I can connect you with trusted local mortgage professionals who can help with pre-approval and finding the best rates."
   },
 
   /**
@@ -413,7 +413,7 @@ export const siteContent = {
     /** @type {string} Description for the main CTA component. */
     ctaDescription: "Whether you're buying or selling, I'll help you achieve the best possible outcome.",
     /** @type {string} Button text for the main CTA component. */
-    ctaButtonText: "Contact Agent Today", // Placeholder - Constructed dynamically in Cta.jsx
+    ctaButtonText: "Book a Call",
     /** @type {string} Title for the Brands/Partners section (`Brands.jsx`). */
     brandsTitle: "Let's Work Together",
     /** @type {string} Description for the Brands/Partners section. */

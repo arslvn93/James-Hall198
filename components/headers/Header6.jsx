@@ -28,8 +28,7 @@ export default function Header6() {
                       className="tf-btn style-border border2 pd-23"
                       href={`/contact`}
                     >
-                      {/* Assuming a generic CTA, could add specific one to siteContent.common */}
-                      Book a Consultation
+                      Book a Call
                     </Link>
                   </div>
                   <div
