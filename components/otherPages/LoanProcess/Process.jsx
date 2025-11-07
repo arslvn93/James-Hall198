@@ -115,7 +115,7 @@ export default function Process() {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="wrap-box">
@@ -208,7 +208,7 @@ export default function Process() {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="wrap-box">
@@ -301,7 +301,7 @@ export default function Process() {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
