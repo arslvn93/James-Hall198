@@ -4,7 +4,6 @@ import { siteContent } from "@/data/siteContent"; // Import centralized content
 // Removed services import
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import Link from "next/link";
 import SplitTextAnimation from "@/components/common/SplitTextAnimation";
 import { Pagination } from "swiper/modules";
 export default function Services() {
@@ -69,9 +68,7 @@ export default function Services() {
                     </div>
                     <div className="content text-center">
                       <div className="text-11 fw-6 text_white title mb-16">
-                        <Link href="/contact" className="text_white link">
-                          {service.title}
-                        </Link>
+                        {service.title}
                       </div>
                       <p className="text-1 text-color1">
                         {service.description}

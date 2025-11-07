@@ -91,7 +91,7 @@ export default function About() {
                     </svg>
                   </div>
                   <div className="content">
-                    <div className="sub">Office address</div>
+                    <div className="sub">Cell Number</div>
                     <div className="phone">{siteContent.agent.phone}</div>
                   </div>
                 </li>
@@ -167,7 +167,7 @@ export default function About() {
                     </svg>
                   </div>
                   <div className="content">
-                    <div className="sub">Office address</div>
+                    <div className="sub">Email Me</div>
                     <a href={`mailto:${siteContent.agent.email}`}>{siteContent.agent.email}</a>
                   </div>
                 </li>
