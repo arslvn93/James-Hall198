@@ -13,8 +13,16 @@ export default function Header6() {
               <div className="header-inner-wrap">
                 <div className="header-logo">
                   <Link href={`/`} className="site-logo">
-                    {/* Replaced Image with styled text */}
-                    <span className="text-logo">{siteContent.agent.name}</span>
+                    <div className="logo-container">
+                      <Image
+                        src="/images/logo/jhlogo.svg"
+                        alt={`${siteContent.agent.name} Logo`}
+                        width={64}
+                        height={64}
+                        className="logo-image"
+                      />
+                      <span className="text-logo">{siteContent.agent.name}</span>
+                    </div>
                   </Link>
                 </div>
                 <nav className="main-menu">

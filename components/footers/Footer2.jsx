@@ -44,20 +44,30 @@ export default function Footer2({ parentClass = "" }) {
             <div className="footer-top">
               <div className="footer-logo">
                 <Link href={`/`}>
-                  {/* Replaced Image with styled text */}
-                  <span className="text-logo">{siteContent.agent.name}</span>
+                  <div className="logo-container">
+                    <Image
+                      src="/images/logo/jhlogo.svg"
+                      alt={`${siteContent.agent.name} Logo`}
+                      width={120}
+                      height={100}
+                      className="logo-image"
+                    />
+                    <div>
+                      <span className="text-logo">{siteContent.agent.name}</span>
+                      {/* Added Brokerage Info */}
+                      <div className="brokerage-info" style={{ marginTop: '5px' }}> {/* Added margin for spacing */}
+                        {/* Added Designation using text-color4 utility class */}
+                        <p className="text-3 text-color2" style={{ margin: 0, lineHeight: '1.4' }}> {/* Use text-color4 class */}
+                          {siteContent.agent.designation}
+                        </p>
+                        {/* Updated Brokerage Name (removed label, increased font size) */}
+                        <p className="text-3 text-color1" style={{ margin: 0, lineHeight: '1.4', fontSize: '1.1em' }}> {/* Increased font size slightly */}
+                          {siteContent.agent.brokerageName}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </Link>
-                {/* Added Brokerage Info */}
-                <div className="brokerage-info" style={{ marginTop: '5px' }}> {/* Added margin for spacing */}
-                  {/* Added Designation using text-color4 utility class */}
-                  <p className="text-3 text-color2" style={{ margin: 0, lineHeight: '1.4' }}> {/* Use text-color4 class */}
-                    {siteContent.agent.designation}
-                  </p>
-                  {/* Updated Brokerage Name (removed label, increased font size) */}
-                  <p className="text-3 text-color1" style={{ margin: 0, lineHeight: '1.4', fontSize: '1.1em' }}> {/* Increased font size slightly */}
-                    {siteContent.agent.brokerageName}
-                  </p>
-                </div>
               </div>
               <div className="wrap-contact-item style-1">
                 <div className="contact-item">

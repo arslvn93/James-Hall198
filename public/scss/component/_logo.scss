@@ -1,5 +1,47 @@
 @use "../abstracts/variable";
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
+  .logo-image {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: contain;
+    filter: brightness(0) invert(1); // Convert black outline to white
+  }
+}
+
+// Responsive logo sizing
+@media (max-width: 1199px) {
+  .logo-container {
+    gap: 3px;
+    
+    .logo-image {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-container {
+    gap: 2px;
+    
+    .logo-image {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .text-logo {
+      font-size: 2.4rem; // Slightly smaller on mobile to accommodate logo
+    }
+  }
+}
+
 .text-logo {
   font-family: 'Afacad', sans-serif; // Changed to Afacad
   font-weight: 500; // Changed to Medium weight

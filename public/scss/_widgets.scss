@@ -3872,6 +3872,18 @@
     gap: 24px;
     margin-bottom: 48px;
   }
+  .expertise-logo {
+    margin-top: 32px;
+    
+    .expertise-logo-image {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      object-fit: contain;
+      filter: brightness(0) invert(1); // Convert black outline to white
+    }
+  }
+  
   .list-check {
     display: grid;
     gap: 12px;

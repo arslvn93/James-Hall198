@@ -285,6 +285,7 @@
     .heading {
       background-color: var(--bg-body-color);
       height: 100%;
+      margin-bottom: 40px;
       .title {
         background-image: linear-gradient(
           -225deg,
@@ -300,6 +301,7 @@
         -webkit-text-fill-color: transparent;
         animation: textclip 14s linear infinite;
         display: inline-block;
+        margin-bottom: 32px;
         span {
           background-clip: text;
           text-fill-color: transparent;
@@ -326,12 +328,28 @@
         padding-top: 11px;
         p {
           color: var(--border-2);
-          margin-bottom: 24px;
+          margin-bottom: 40px;
+          font-size: 16px;
+          line-height: 1.6;
         }
+          .tf-btn {
+            font-size: 16px;
+            height: 56px;
+            padding: 0 32px;
+            i {
+              font-size: 24px;
+            }
+            svg {
+              width: 24px;
+              height: 24px;
+              color: var(--Primary);
+            }
+          }
       }
     }
     .right {
-      overflow: hidden;
+      position: relative;
+      overflow: visible;
       .slide-inner {
         width: 100%;
         border-radius: 24px;
@@ -339,6 +357,31 @@
       }
       .swiper {
         border-radius: 24px;
+      }
+      .hero-logo-badge {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        z-index: 10;
+        .hero-badge-image {
+          width: 120px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: contain;
+          filter: brightness(0) invert(1); // Convert black outline to white
+        }
+      }
+    }
+    
+    // Desktop-specific hero badge size
+    @media (min-width: 1200px) {
+      .right {
+        .hero-logo-badge {
+          .hero-badge-image {
+            width: 200px;
+            height: 150px;
+          }
+        }
       }
     }
     .left {
@@ -357,6 +400,68 @@
     form {
       fieldset input {
         border-radius: 999px;
+      }
+    }
+    
+    // Desktop-specific enhancements for larger screens
+    @media (min-width: 1200px) {
+      .heading {
+        margin-bottom: 60px;
+      }
+      .item {
+        .content {
+          padding-top: 20px;
+          max-width: 700px !important;
+          p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 56px;
+          }
+          .tf-btn {
+            font-size: 18px;
+            height: 64px;
+            padding: 0 40px;
+            line-height: 1.2;
+            i {
+              font-size: 28px;
+            }
+            svg {
+              width: 28px;
+              height: 28px;
+              color: var(--Primary);
+            }
+          }
+        }
+      }
+    }
+    
+    // Extra large desktop screens
+    @media (min-width: 1400px) {
+      .heading {
+        margin-bottom: 80px;
+      }
+      .item {
+        .content {
+          max-width: 750px !important;
+          p {
+            font-size: 22px;
+            line-height: 1.75;
+            margin-bottom: 64px;
+          }
+          .tf-btn {
+            font-size: 20px;
+            height: 72px;
+            padding: 0 48px;
+            i {
+              font-size: 32px;
+            }
+            svg {
+              width: 32px;
+              height: 32px;
+              color: var(--Primary);
+            }
+          }
+        }
       }
     }
   }

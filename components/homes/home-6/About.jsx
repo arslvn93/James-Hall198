@@ -74,16 +74,15 @@ export default function About() {
                        </li>
                     ))}
                   </ul>
-                </div>
-                <div className="img-style">
-                  <Image
-                    className="lazyload parallax-img img-custom-anim-left"
-                    data-src="/images/section/section-find-home.jpg"
-                    alt=""
-                    width={552}
-                    height={319}
-                    src={siteContent.about.image2Src}
-                  />
+                  <div className="expertise-logo wow animate__fadeInUp animate__animated" style={{ marginTop: '32px' }}>
+                    <Image
+                      src="/images/logo/jhlogo.svg"
+                      alt={`${siteContent.agent.name} Logo`}
+                      width={400}
+                      height={400}
+                      className="expertise-logo-image"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

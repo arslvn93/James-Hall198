@@ -37,32 +37,11 @@ export default function Hero() {
                         <div className="item flex-wrap-sm">
                           <div className="content effect-item effect-up effect-3">
                             <p className="text-1">{siteContent.hero.slides[0].description}</p>
-                            
-                            {/* Trust Indicators Section */}
-                            <div className="trust-indicators mb-24 mt-20" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-                              <span className="badge text-4 fw-6" style={{ 
-                                padding: '6px 14px', 
-                                borderRadius: '20px', 
-                                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                color: 'var(--Text-white)',
-                                border: '1px solid rgba(255, 255, 255, 0.2)'
-                              }}>
-                                {siteContent.agent.designation}
-                              </span>
-                              <span className="badge text-4 fw-6" style={{ 
-                                padding: '6px 14px', 
-                                borderRadius: '20px', 
-                                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                color: 'var(--Text-white)',
-                                border: '1px solid rgba(255, 255, 255, 0.2)'
-                              }}>
-                                Lifelong {siteContent.agent.location} Resident
-                              </span>
-                            </div>
 
                             <a
                               href="#contact"
-                              className="tf-btn bg-color-primary pd-26 rounded-cycle height-2"
+                              className="tf-btn style-border pd-26 rounded-cycle height-2"
+                              style={{ borderColor: 'var(--Primary)', color: 'var(--Primary)' }}
                               onClick={(e) => {
                                 e.preventDefault();
                                 const contactSection = document.getElementById("contact");
@@ -73,12 +52,10 @@ export default function Hero() {
                             >
                               {siteContent.hero.slides[0].buttonText} {/* Use button text from siteContent */}
                               {/* Assuming icon remains the same, or could be added to siteContent */}
-                              <Image
-                                alt=""
-                                src="icons/arrow-down-3.svg"
-                                width={24}
-                                height={24}
-                              />
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                                <path d="M18 8L22 12L18 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M2 12H22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
                             </a>
                           </div>
                         </div>
@@ -88,6 +65,15 @@ export default function Hero() {
                 </Swiper>
               </div>
               <div className="right">
+                <div className="hero-logo-badge">
+                  <Image
+                    src="/images/logo/jhlogo.svg"
+                    alt={`${siteContent.agent.name} Logo Badge`}
+                    width={120}
+                    height={100}
+                    className="hero-badge-image"
+                  />
+                </div>
                 <Swiper
                   dir="ltr"
                   className="swiper hero-thumbs-2"

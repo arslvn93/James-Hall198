@@ -78,7 +78,7 @@ export const siteContent = {
         /** @type {string} Main headline. Can include HTML spans for styling. (~5-10 words). */
         title: "Hero Section Headline", // Placeholder - Constructed dynamically in Hero6.jsx
         /** @type {string} Short introductory paragraph (~2-3 sentences / 150-250 chars). */
-        description: "Mission: To put you in the home of your dreams as quickly as possible!", // Resolved: Kept remote change
+        description: "With integrity, data driven insights, and a client first approach, I craft creative, personalized strategies, ensuring every real estate journey is transparent, informed, and tailored to your unique needs.",
         /** @type {string} Text for the main call-to-action button (~2-4 words). */
         buttonText: "Book a Call",
         /** @type {{src: string, alt: string}} Small image next to hero text. `src` relative to /public. */
